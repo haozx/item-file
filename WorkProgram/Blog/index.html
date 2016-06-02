@@ -6,20 +6,22 @@
 <link href="css/style.css" rel="stylesheet" type="text/css" />
 </head>
 <style>
-#wrap{ margin:0 auto; width:980px; background:#fff; overflow:hidden;}
-#header{ height:100px; background-color:#000; overflow:hidden; position:relative;}
-.logo{ background:url(images/logo.png) no-repeat; width:458px; height:100px;display:block; text-indent:-999em; overflow:hidden; margin:2px; z-index:222; position:relative;}
-.right-banner{ position:absolute; right:0; top:0;}
-.tool-menu{ margin:14px 10px;}
-.right{ float:right;}
-.tool-menu a.rss{ display:block; margin-right:12px; float:left; width:16px; height:16px; background:url(images/rss.png) no-repeat;}
-.top-nav{ float:right;}
-.top-nav li{ float:left;}
-.top-nav a{ float:left; margin:10px 12px 0 0; color:#fff; text-decoration:none; font-size:12px;}
+#container{padding:20px; background:#fff; overflow:hidden;clear:both;}
+#content{padding:0 19px 0 0; float:left; border-right:solid 1px #f2f2f2; width:610px;}
+.entry-common:first-child{ padding-top:0px !important;}
+.entry-common{ padding:20px 0; border-bottom:1px dotted #eee;}
+.entry-header{ position:relative; width:100%;}
+.entry-name{ font-size:18px; line-height:24px; min-height:24px; display:block; padding-right:35px; margin-bottom:10px; font-weight:bold;}
+.entry-meta{position:relative; font-size:12px; margin-top:-15px; padding:10px 0; border-bottom:1px solid #eee; text-transform:uppercase;}
+.entry-content{ color:#333; line-height:1.9em; text-align:justify;}
+.content-page{ margin:5px 20px; font-size:13px; background-color:#fff; height:36px; line-height:36px; text-align:center; overflow:hidden; padding:1em 4px 4px; clear:both;}
+.content-page a{ padding:3px 8px; margin:2px;}
+.content-page a.current, .content-page a:hover{ font-weight:400; color:#fff; background-color:#d14836;}
+#sidebar{ float:right; width:290px;}
 </style>
 <body class="home blog">
 <div id="wrap">
-  <header id="header" class=" clear">
+  <header id="header" class="clearfix">
     <h1><a class="logo" href="#" title="左岸读书">左岸读书</a></h1>
     <div class="right-banner">
       <div class="tool-menu right">
@@ -34,6 +36,271 @@
       </nav>
     </div>
   </header>
+  <div id="navigation" role="navigation">
+    <nav class="menu-container">
+      <ul class="fancy-rollovers" id="menu-nav">
+        <li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-4061 "><a href="#">首页</a></li>
+        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4063"><a href="#">热文</a></li>
+        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4064"><a href="#">左岸书库</a></li>
+        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4065"><a href="#">左岸音乐</a></li>
+        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4116"><a href="#">关于左岸</a></li>
+        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4117"><a href="#">留言板</a></li>
+      </ul>
+    </nav>
+    <div class="nav-right right">
+      <a href="javascript:;" class="show-search"></a>
+      <a href="javascript:;" class="show-cat-list catlist-show"></a>
+    </div>
+  </div>
+  <div class="fullwidth clearfix" id="cat-list">
+    <div id="cat-list-inner" class="clearfix">
+      <div class="border"></div>
+      <div class="cat-list-item first live-list">
+        <h3>最新</h3>
+        <div id="top-newest-post">
+          <ul class="clearfix">
+            <li><a href="#">重读《射雕》手记</a></li>
+            <li><a href="#">你是想要一个乖巧的孩子还是一个积极的孩子？</a></li>
+            <li><a href="#">双目相望，两耳生情</a></li>
+            <li><a href="#">老头王八</a></li>
+            <li><a href="#">理智情感：每日面对的内心冲突</a></li>
+            <li><a href="#">学问，就是对问题说的出道理</a></li>
+            <li><a href="#">我和RSS那点事儿</a></li>
+            <li><a href="#">悼念杨绛先生：最贤的妻，最才的女</a></li>
+          </ul>
+        </div>
+        <a href="#" class="more-all" title="更多观察">更多>></a>
+      </div>
+      <div class="cat-list-item recommend-subject">
+        <h3>推荐</h3>
+        <div class="recommend-subject-item first">
+          <a href="javascript:void(0);" class="thumb"><img src="images/xkx.jpg" /></a>
+          <ul class="clearfix">
+            <li><a href="#">成年人的思想还能进步吗</a></li>
+            <li><a href="#">社交动物</a></li>
+            <li><a href="#">我们如何判断别人的想法</a></li>
+            <li><a href="#">幸福新思维</a></li>
+            <li><a href="#">有时候，发现自己一夜之间就长大了</a></li>
+          </ul>
+        </div>
+        <div class="recommend-subject-item">
+          <a href="javascript:void(0);" class="thumb"><img src="images/xkx.jpg" /></a>
+          <ul class="clearfix">
+            <li><a href="#">寄生在自我里的我</a></li>
+            <li><a href="#">关于人生的沉思</a></li>
+            <li><a href="#">怎样理性地讨论问题</a></li>
+            <li><a href="#">慢慢地变老</a></li>
+            <li><a href="#">世界都在焦虑，你要找准自己的节奏</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="container">
+    <div id="content">
+      <article class="entry-common clearfix">
+        <header class="entry-header">
+          <h2 class="entry-name"><a href="#">重读《射雕》手记</a></h2>
+        </header>
+        <address class="entry-meta">
+          <span>2016-06-02</span> | 发布：<span><a href="#">左岸</a></span> | 分类：<a href="#">阅读时间</a> | 标签：<a href="#">人生</a>+<a href="#">思考</a>+<a href="#">评论</a>+<a href="#">阅读</a> | <span>阅读：270 VIEWS</span>
+        </address>
+        <div class="entry-content">
+        前言：因挚友个性酷似东邪，又翻过往投稿文章，得此佳文，算得上是缘分。文/旅者一 . 李萍：伟大的母亲李萍是郭啸天的妻子。那时习惯，称妻子为“浑家”。“浑家”大概是说，妻子因是女人，不免浑然无知，难识大体。这当然是丈夫提及妻子时的谦称。郭啸天是山东大汉，粗鲁豪迈，李萍虽是江南临安女子，却生得大手大脚，甚是健壮。这两人结成姻缘，正是良配，浑然一体。因此郭啸天称李萍为“浑家”，便颇为传 ...
+      </div>
+      </article>
+      <article class="entry-common clearfix">
+        <header class="entry-header">
+          <h2 class="entry-name"><a href="#">你是想要一个乖巧的孩子还是一个积极的孩子？</a></h2>
+        </header>
+        <address class="entry-meta">
+          <span>2016-06-02</span> | 发布：<span><a href="#">左岸</a></span> | 分类：<a href="#">教育日记</a> | 标签：<a href="#">孩子</a>+<a href="#">成长</a>+<a href="#">教育</a> | <span>阅读762 VIEWS</span>
+        </address>
+        <div class="entry-content">
+        文/Ryan M.Niemiec, Psy.D译/呵呵呵heheh 人类所有的道德不过是掩盖伤害的石膏，殊不知那伤痛是永久的，健康的生命应该根植于内心的康乐，那些看似遵循社会规范的乖巧行为只不过是真实生命最虚伪的替代品。可惜，人们却往往如此。——威廉·詹姆士（1902） 孩子们的情绪是非常容易互相影响。无论在喧闹的操场上还是在沉默的教室里。但是，如果我们仔细观察，我们会发现每个孩子处理社交和情绪的方式是不大一 ...
+      </div>
+      </article>
+      <article class="entry-common clearfix">
+        <header class="entry-header">
+          <h2 class="entry-name"><a href="#">双目相望，两耳生情</a></h2>
+        </header>
+        <address class="entry-meta">
+          <span>2016-06-02</span> | 发布：<span><a href="#">水上冰忆</a></span> | 分类：<a href="#">温情故事</a> | 标签：<a href="#">情感</a>+<a href="#">故事</a>+<a href="#">爱情</a> | <span>阅读：270 VIEWS</span>
+        </address>
+        <div class="entry-content">
+        相爱相“杀” 婚姻的核心是夫妻关系。两个人的相处模式是个矛盾体，也是个会偷懒的主，因为它有分身术，看分身A柔情似水、善解人意，可分身B却面目狰狞、恶语相向。 我和R两个人好的时候像一个人，对峙的时候中间横亘着一座冰山，待到阳光普照，冰山融化，又合力收拾这一滩水。老生常谈，都交给时间。总是告诉自己下次碰到问题要冷静要换位不要争执，到问题出现时，竟把许诺忘个干净，吵它个天昏地暗。在之 ...
+      </div>
+      </article>
+      <article class="entry-common clearfix">
+        <header class="entry-header">
+          <h2 class="entry-name"><a href="#">老头王八</a></h2>
+        </header>
+        <address class="entry-meta">
+          <span>2016-06-02</span> | 发布：<span><a href="#">左岸</a></span> | 分类：<a href="#">温情故事</a> | 标签：<a href="#">人生</a>+<a href="#">成长</a>+<a href="#">故事</a> | <span>阅读：270 VIEWS</span>
+        </address>
+        <div class="entry-content">
+        文/锦瑟 天热了，也是野生甲鱼、黄鳝上市的时候了。 今天的天气，热，下午暴雨，然后又阴，特别的潮闷，让人感觉压抑。 韩愈说过，物不平则鸣，其实人也是如此，比如说，我压抑了，我就有了倾述的欲望。记忆是个很奇怪的东西，今天的天气，就让我回忆起，很多年前一个类似的夜晚。 大概半夜一点的时候，我站在河边，弯着腰，手里轻轻的拽着线，隐约看到水草中，有一个大黑影在翻动。 简单的介绍一下，大头 ...
+      </div>
+      </article>
+      <article class="entry-common clearfix">
+        <header class="entry-header">
+          <h2 class="entry-name"><a href="#">理智情感：每日面对的内心冲突</a></h2>
+        </header>
+        <address class="entry-meta">
+          <span>2016-06-02</span> | 发布：<span><a href="#">左岸</a></span> | 分类：<a href="#">阅读时间</a> | 标签：<a href="#">心理</a>+<a href="#">思考</a>+<a href="#">生活观察</a>+<a href="#">阅读</a> | <span>阅读：270 VIEWS</span>
+        </address>
+        <div class="entry-content">
+        文/静静 书是去年就看完了，只是经常有人留言让我推荐书，于是就打算把之前看的书，理一理，写写读后感。 《痛并快乐着》按时间顺序，从白岩松1989年毕业那年写到工作十年后的1999年，书在2000年就出版了，2010年是再版。书名是取自齐秦的专辑名字，因为对于他们而言，齐秦的歌让他们学会独对心灵。 可能平时刷微博的时候看到白岩松的一些段子，让我对他留下一些不错的印象，或者也是因为他作为新闻媒体人 ...
+      </div>
+      </article>
+      <article class="entry-common clearfix">
+        <header class="entry-header">
+          <h2 class="entry-name"><a href="#">学问，就是对问题说得出道理</a></h2>
+        </header>
+        <address class="entry-meta">
+          <span>2016-06-02</span> | 发布：<span><a href="#">左岸</a></span> | 分类：<a href="#">思维乐趣</a> | 标签：<a href="#">学问</a>+<a href="#">思维</a>+<a href="#">问题</a> | <span>阅读：270 VIEWS</span>
+        </address>
+        <div class="entry-content">
+        作者：梁漱溟  所谓学问，就是对问题说得出道理，有自己的想法。想法似乎人人都是有的，但又等于没有。因为大多数人的头脑杂乱无章，人云亦云，对于不同的观点意见，他都点头称是，等于没有想法。 我从来没有想过要做学问，走上现在这条路，只是因为我喜欢提问题。大约从十四岁开始，总有问题占据在我的心里，从一个问题转入另一个问题，一直想如何解答，解答不完就欲罢不能，就一路走了下来。提得出问 ...
+      </div>
+      </article>
+      <article class="entry-common clearfix">
+        <header class="entry-header">
+          <h2 class="entry-name"><a href="#">我和RSS那点事儿</a></h2>
+        </header>
+        <address class="entry-meta">
+          <span>2016-06-02</span> | 发布：<span><a href="#">左岸</a></span> | 分类：<a href="#">阅读时间</a> | 标签：<a href="#">RSS</a>+<a href="#">技巧</a>+<a href="#">阅读</a> | <span>阅读：270 VIEWS</span>
+        </address>
+        <div class="entry-content">
+        文/子轼 早在Google Reader还活着的时候，我就已径开始用RSS聚合了。从青葱少年成长为闷骚大叔，这么多年的使用已经让我对其产生了依赖，成为了重度RSS用户。当年的Google Reader总让我觉得各种好，曾经的我因为Google Reader的关闭伤心难过了好久，一度坚信RSS会在不久后不复存在。现在看来，当时我真的是很少很天真。 在当今这样一个信息爆炸的时代，我们需要信息的过滤。 曾几何时，我和我的小伙伴们还 ...
+      </div>
+      </article>
+      <article class="entry-common clearfix">
+        <header class="entry-header">
+          <h2 class="entry-name"><a href="#">悼念杨绛先生：最贤的妻，最才的女</a></h2>
+        </header>
+        <address class="entry-meta">
+          <span>2016-06-02</span> | 发布：<span><a href="#">左岸</a></span> | 分类：<a href="#">风云印象</a> | 标签：<a href="#">人生</a>+<a href="#">女人</a>+<a href="#">心灵</a>+<a href="#">情感</a> | <span>阅读：270 VIEWS</span>
+        </address>
+        <div class="entry-content">
+        文/周墨白 微博@周墨白啦 知妻莫如夫。 最了解钱钟书的是杨绛，最了解杨绛的也是钱钟书。 钱钟书曾评价杨绛：最贤的妻,最才的女。 卿本佳人，奈何夫君掩才情。 杨绛的才情是完全够得上大师二字的，只可惜其夫君的光芒太过耀眼，以至于很多人只知道杨绛是钱钟书的妻子，却忽视了她也同样是一位大师。 最才的女： 杨绛，本名杨季康，生于1911年7月17日，祖籍江苏无锡，1932年毕业于苏州东吴大学。1935年—19 ...
+      </div>
+      </article>
+      <article class="entry-common clearfix">
+        <header class="entry-header">
+          <h2 class="entry-name"><a href="#">给十年前“正在备战高考”的自己的一封信。</a></h2>
+        </header>
+        <address class="entry-meta">
+          <span>2016-06-02</span> | 发布：<span><a href="#">沈万九</a></span> | 分类：<a href="#">教育日记</a> | 标签：<a href="#">学习</a>+<a href="#">成长</a>+<a href="#">高考</a> | <span>阅读：270 VIEWS</span>
+        </address>
+        <div class="entry-content">
+        To 十年前的我： 见信如唔，近来可好？ 正所谓“衣带渐宽终不悔”，“风萧萧兮易水寒”，马上又要高考了，你丫是不是快撑不住了？！ 哈哈哈，我几乎可以确定一定以及肯定是的，因为我太能理解那种感受了。 高考对我来说，虽然已经过了一个世纪那么漫长，但其体验就像是初夜（而且还是女性初夜）一样，绝对是独一无二的。 有……
+      </div>
+      </article>
+      <article class="entry-common clearfix">
+        <header class="entry-header">
+          <h2 class="entry-name"><a href="#">此夏半开，何处安然</a></h2>
+        </header>
+        <address class="entry-meta">
+          <span>2016-06-02</span> | 发布：<span><a href="#">左岸</a></span> | 分类：<a href="#">教育日记</a> | 标签：<a href="#">人生</a>+<a href="#">心灵</a>+<a href="#">成长</a> | <span>阅读：270 VIEWS</span>
+        </address>
+        <div class="entry-content">
+        文/獨洎看汐陽 半夏花开，带着淡淡的芬芳，优雅了过人的清凉，渲染了某人的忧伤。漫天云彩，布着白白的微笑，美丽了蓝天的双眸，装饰了客人的心窗。久恋紫冬，痴爱着那份安详和静谧。白雪凉凉却最懂人心，无论喜与忧，无谓苦与愁，它永远静静的陪伴着抚慰着需要安慰的人，以其空灵和纯净净化某人心灵，然后升华带走悲伤和……
+      </div>
+      </article>
+      <article class="entry-common clearfix">
+        <header class="entry-header">
+          <h2 class="entry-name"><a href="#">陪伴，其实有许多的滋味</a></h2>
+        </header>
+        <address class="entry-meta">
+          <span>2016-06-02</span> | 发布：<span><a href="#">左岸</a></span> | 分类：<a href="#">教育日记</a> | 标签：<a href="#">情感</a>+<a href="#">成长</a>+<a href="#">教育</a>+<a href="#">陪伴</a> | <span>阅读：270 VIEWS</span>
+        </address>
+        <div class="entry-content">
+        文/稻田 下面的故事，难道只是一个家庭的经历？重要的是，人的回忆里不能少了伴儿成长这一段，何况，陪伴还将继续。 无法拒绝的礼物（序） 客厅里，我和妻子握紧了拳头，不是要爆发家庭战争，而是要做出一个重大的生活决定——是否结束“丁克”生活。紧握的拳头缓缓张开，变成手掌，掌心印出两个字：“是”、“否”。不存在少数服……
+      </div>
+      </article>
+      <article class="entry-common clearfix">
+        <header class="entry-header">
+          <h2 class="entry-name"><a href="#">你只是爱“看”书，不是会“读”书</a></h2>
+        </header>
+        <address class="entry-meta">
+          <span>2016-06-02</span> | 发布：<span><a href="#">左岸</a></span> | 分类：<a href="#">教育日记</a> | 标签：<a href="#">习惯</a>+<a href="#">技巧</a>+<a href="#">阅读</a> | <span>阅读：270 VIEWS</span>
+        </address>
+        <div class="entry-content">
+        今天是世界读书日，分享笔记侠整理《秋叶：如何高效读懂一本书》的一篇读书心得。   一、首先我要告诉各位，不要盲目地和别人攀比阅读的数量。 我还要告诉大家一个概念，在不同的阶段人读的书是不同的。按照《越读者》作者郝明义老师的建议： 书应该分四种：第一种叫工具书，第二种叫干货书，第三种叫视野书，第四种叫消……
+      </div>
+      </article>
+      <article class="entry-common clearfix">
+        <header class="entry-header">
+          <h2 class="entry-name"><a href="#">20年的求学总结</a></h2>
+        </header>
+        <address class="entry-meta">
+          <span>2016-06-02</span> | 发布：<span><a href="#">左岸</a></span> | 分类：<a href="#">教育日记</a> | 标签：<a href="#">学习</a>+<a href="#">思考</a>+<a href="#">成长</a>+<a href="#">技巧</a> | <span>阅读：270 VIEWS</span>
+        </address>
+        <div class="entry-content">
+        文/静静 题记：走出象牙塔，未来是一片海阔天空。 随着昨天硕士学位论文答辩的结束，我的学生生涯开始画句号，接下来一系列的离校手续结束后，就真的要离开校园这个象牙塔了。 从学前班开始，带着学生这个身份已经有二十个年头了。每次聚会，亲朋好友总是重复问起“什么时候毕业？”时，甚至让我有些尴尬，也会有些迫不及待……
+      </div>
+      </article>
+      <article class="entry-common clearfix">
+        <header class="entry-header">
+          <h2 class="entry-name"><a href="#">如果人生可以假设，你能给自己多少可能</a></h2>
+        </header>
+        <address class="entry-meta">
+          <span>2016-06-02</span> | 发布：<span><a href="#">左岸</a></span> | 分类：<a href="#">教育日记,阅读时间</a> | 标签：<a href="#">孩子</a>+<a href="#">成长</a>+<a href="#">教育</a>+<a href="#">阅读</a> | <span>阅读：270 VIEWS</span>
+        </address>
+        <div class="entry-content">
+        人生是一场被安排相遇，未安排结局的旅行，这场前所未有的旅程注定被每个人铭记于心。人生没有如果，命运没有假设。不管怎样的人生，只要尽了最大的努力，就该无怨无悔，更无需“如果”，曾经和未来都没有“假设”。所以，只有一次的人生，切莫虚度枉费，更不该让自己后悔。为了预知幸福，四个男人为自己安排了一次感受未知的……
+      </div>
+      </article>
+      <article class="entry-common clearfix">
+        <header class="entry-header">
+          <h2 class="entry-name"><a href="#">人要好好活，做有意义的事</a></h2>
+        </header>
+        <address class="entry-meta">
+          <span>2016-06-02</span> | 发布：<span><a href="#">左岸</a></span> | 分类：<a href="#">教育日记</a> | 标签：<a href="#">励志</a>+<a href="#">学习</a>+<a href="#">成长</a>+<a href="#">教育</a> | <span>阅读：270 VIEWS</span>
+        </address>
+        <div class="entry-content">
+        文/小镇故事 昨晚，小朋友W说起，我一日在饭桌上说她不适合作研究。我矢口否认，因为我一直从内心里觉得她是适合研究的，或者说适合继续的深造。但是她言之凿凿，说我定然说过。难道我果真说过？于是心下恻然。那么，以后，是不能这么对小朋友们说话了。或者不经意间的一句断语，打击了一颗上进的心。生活本身有诸多偶然……
+      </div>
+      </article>
+      <article class="entry-common clearfix">
+        <header class="entry-header">
+          <h2 class="entry-name"><a href="#">一只蜗牛的十八年</a></h2>
+        </header>
+        <address class="entry-meta">
+          <span>2016-06-02</span> | 发布：<span><a href="#">左岸</a></span> | 分类：<a href="#">教育日记</a> | 标签：a href="#">励志</a>+<a href="#">学习</a>+<a href="#">成长</a>+<a href="#">教育</a> | <span>阅读：270 VIEWS</span>
+        </address>
+        <div class="entry-content">
+        文/周墨白 微博ID：周墨白啦 山师本部的樱花快要盛开了，在这个青春的季节，在这个花开不败的季节。 恐怕我的老师或者说我自己也没有想到我会有这么一天吧，我这种曾经倒数的学生居然也能站在这样的好的大学里看这样美的樱花纷飞。似乎有些美好到不真实了，然而又有什么不真实呢，我用自己的努力换来的有什么不真实！ 也……
+      </div>
+      </article>
+      <article class="entry-common clearfix">
+        <header class="entry-header">
+          <h2 class="entry-name"><a href="#">思想脱贫了吗？</a></h2>
+        </header>
+        <address class="entry-meta">
+          <span>2016-06-02</span> | 发布：<span><a href="#">左岸</a></span> | 分类：<a href="#">教育日记</a> | 标签：<a href="#">人生</a>+<a href="#">总结</a>+<a href="#">成长</a>+<a href="#">教育</a> | <span>阅读：270 VIEWS</span>
+        </address>
+        <div class="entry-content">
+        文/焾 昨天师长发来信息说给你的2015来个总结吧，当时逗逼属性发作差点回他：吾日三省吾身，脱贫了吗？脱单了吗？脱脂了吗？过后这个词却一直在我心底徘徊不去，我向来害怕对人、事、物下定义，自知学识、阅历浅薄，对其下定义带有自己强烈的主观色彩，遗留下一些自己回头再看都觉得蠢的概念，用上铺的话来说那就是不堪回……
+      </div>
+      </article>
+      <div class="content-page">
+        <a href="#" class="current">1</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <a href="#">4</a>
+        <a href="#">5</a>
+        <a href="#">6</a>
+        <a href="#">7</a>
+        <a href="#" class="next">下一页</a>
+        <a href="#" class="extend">尾页</a>
+      </div>
+    </div>
+    <div id="sidebar">
+      1
+    </div>
+  </div>
 </div>
 </body>
 </html>
