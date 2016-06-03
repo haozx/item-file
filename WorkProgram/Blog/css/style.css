@@ -8,7 +8,7 @@ audio,canvas,video{ display:inline-block;}
 address{ font-style:normal; font-weight:500;}
 table{width:100%; border-collapse:collapse; border-spacing:0; empty-cells:show;}
 img{ border:0;}
-ul,li,ol{ list-style:none;}
+ul,li{ list-style:none;}
 a{ text-decoration:none;}
 a,input,textarea{ color:#333;}
 .left, .right{ display:inline;}
@@ -16,9 +16,25 @@ a,input,textarea{ color:#333;}
 .clearfix:before, .clearfix:after{ content:''; display:table; line-height:0;}
 .clearfix:after{ content:''; display:table; line-height:0;}
 
+/*底部页脚*/
+#footer{ clear:both; text-align:left; padding:10px 20px; color:#fff; font-size:12px; background-color:#000; overflow:hidden; position:relative; border-bottom:3px solid #d14836;}
 /*首页样式*/
 #wrap{ margin:0 auto; width:980px; background:#fff; overflow:hidden;}
 #header{ height:100px; background-color:#000; overflow:hidden; position:relative;}
+#navigation{ height:38px; position:relative; background:whiteSmoke;}
+#menu-nav{ margin-left:15px; position:relative;}
+#menu-nav li{ float:left; padding:2px 5px; position:relative;}
+#menu-nav li a{ padding:5px 10px; margin:5px 0; display:block; float:left; color:#000; line-height:1;}
+#menu-nav li.current-menu-item a, #menu-nav li a:hover{ color:#fff; background:#d14836;}
+#cat-list{background: none repeat scroll 0 0 #fff; position:relative; z-index:999;}
+#cat-list-inner{ background:none repeat scroll 0 0 #f5f5f5;}
+#cat-list .border{ background:none repeat scroll 0 0 #000; height:3px; width:100%;}
+#cat-list .cat-list-item{ float:left; height:285px; overflow:hidden; padding:0 20px 20px; text-align:left; width:439px; position:relative;}
+#cat-list h3{ background:none repeat scroll 0 0 #000; color:#fff; font-size:14px; font-weight:700; height:30px; letter-spacing:2px; line-height:30px; margin-bottom:10px; text-align:center; width:80px;}
+#cat-list .cat-list-item.recommend-subject{ border-left:1px dotted #aaa; padding:0 19px 20px 20px; width:460px;}
+#container{padding:20px; background:#fff; overflow:hidden;clear:both;}
+#content{padding:0 19px 0 0; float:left; border-right:solid 1px #f2f2f2; width:610px;}
+#sidebar{ float:right; width:290px;}
 .logo{ background:url(../images/logo.png) no-repeat; width:458px; height:100px;display:block; text-indent:-999em; overflow:hidden; margin:2px; z-index:222; position:relative;}
 .right-banner{ position:absolute; right:0; top:0;}
 .tool-menu{ margin:14px 10px;}
@@ -27,46 +43,36 @@ a,input,textarea{ color:#333;}
 .top-nav{ float:right;}
 .top-nav li{ float:left;}
 .top-nav a{ float:left; margin:10px 12px 0 0; color:#fff; font-size:12px;}
-#navigation{ height:38px; position:relative; background:whiteSmoke;}
-#menu-nav{ margin-left:15px; position:relative;}
-#menu-nav li{ float:left; padding:2px 5px; position:relative;}
-#menu-nav li a{ padding:5px 10px; margin:5px 0; display:block; float:left; color:#000; line-height:1;}
-#menu-nav li.current-menu-item a, #menu-nav li a:hover{ color:#fff; background:#d14836;}
 .nav-right{ margin:7px 20px 0 0;}
 .nav-right a.show-search{ background:url(../images/icon.png) no-repeat scroll -88px 6px; display:block; margin-left:1px; position:relative; width:40px; height:24px; float:left;}
 .nav-right a.show-search:hover{ background-position:-162px 6px; background-color:#d14836}
 .nav-right .show-cat-list{ background:url(../images/icon.png) no-repeat scroll -124px 7px transparent; display:block; width:40px; height:24px; float:left; margin-left:1px; position:relative;}
 .nav-right .show-cat-list.catlist-show{ background-color:#d14836; background-position:-196px 7px;}
 .home #cat-list{ display:block;}
-#cat-list{background: none repeat scroll 0 0 #fff; position:relative; z-index:999;}
-#cat-list-inner{ background:none repeat scroll 0 0 #f5f5f5;}
-#cat-list .border{ background:none repeat scroll 0 0 #000; height:3px; width:100%;}
-#cat-list .cat-list-item{ float:left; height:285px; overflow:hidden; padding:0 20px 20px; text-align:left; width:439px; position:relative;}
-#cat-list h3{ background:none repeat scroll 0 0 #000; color:#fff; font-size:14px; font-weight:700; height:30px; letter-spacing:2px; line-height:30px; margin-bottom:10px; text-align:center; width:80px;}
 .live-list li a{ display:block; float:left; height:32px;  line-height:32px; padding:0; position:relative; width:430px;}
-.more-all{ display:block; position:absolute; right:20px; bottom:15px;}
-#cat-list .cat-list-item.recommend-subject{ border-left:1px dotted #aaa; padding:0 19px 20px 20px; width:460px;}
+.live-list li a:hover{background:none repeat scroll 0 0 #d14839; color:#fff; padding-left:10px;}
+.more-all{ display:block; position:absolute; right:20px; top:15px;}
+
 .recommend-subject-item.first{ margin-left:0;}
 .recommend-subject-item{ float:left; margin-left:20px; overflow:hidden; width:220px;}
 .recommend-subject .thumb{ display:block; height:80px; margin-bottom:10px; overflow:hidden; width:220px;}
 .recommend-subject img{ width:220px;-webkit-transition:all .5s; -moz-transition:all .5s; transition: all .5s;}
 .recommend-subject img:hover{ transform:scale(1.1);}
 .recommend-subject li a{ background:url(images/lists.png) no-repeat scroll left 9px transparent; display:block; float:left; font-size:12px; line-height:20px; margin-bottom:8px; padding-left:10px; width:210px;}
-#container{padding:20px; background:#fff; overflow:hidden;clear:both;}
-#content{padding:0 19px 0 0; float:left; border-right:solid 1px #f2f2f2; width:610px;}
 .entry-common:first-child{ padding-top:0px !important;}
 .entry-common{ padding:20px 0; border-bottom:1px dotted #eee;}
 .entry-header{ position:relative; width:100%;}
 .entry-name{ font-size:18px; line-height:24px; min-height:24px; display:block; padding-right:35px; margin-bottom:10px; font-weight:bold;}
 .entry-meta{position:relative; font-size:12px; margin-top:-15px; padding:10px 0; border-bottom:1px solid #eee; text-transform:uppercase;}
 .entry-content{ color:#333; line-height:1.9em; text-align:justify;}
+.entry-content h2{ font-size:16px; font-weight:400; margin:10px 0;}
 .content-page{ margin:5px 20px; font-size:13px; background-color:#fff; height:36px; line-height:36px; text-align:center; overflow:hidden; padding:1em 4px 4px; clear:both;}
 .content-page a{ padding:3px 8px; margin:2px;}
 .content-page a.current, .content-page a:hover{ font-weight:400; color:#fff; background-color:#d14836;}
-#sidebar{ float:right; width:290px;}
 .widget{ margin-bottom:15px; position:relative; clear:both;}
 .widget_text{ font-size:12px; padding:0 0 0 20px;}
 .widget_text{ list-style: square outside  none; padding:5px 0;}
 .widget h2{ margin:0 0 10px; font-size:14px; font-weight:700; line-height:34px; height:34px; display:block; background:#eee; padding:0 10px;}
 .tagcloud{ overflow:hidden;}
-.tagcloud a{ font-size:12px; padding:5px; background:#eee; margin:0 5px 5px 0; display:block; float:left; transition:0.5s;}
+.tagcloud a{ font-size:12px; padding:5px; background:#eee; margin:0 5px 5px 0; display:block; float:left;}
+.tagcloud a:hover{ background:none repeat scroll 0 0 #d14839; color:#fff;}
