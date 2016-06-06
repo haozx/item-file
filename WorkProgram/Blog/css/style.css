@@ -7,7 +7,7 @@ article,aside,details,figcaption,figure,footer,,header,hgroup,menu,nav,section{d
 audio,canvas,video{ display:inline-block;}
 address{ font-style:normal; font-weight:500;}
 table{width:100%; border-collapse:collapse; border-spacing:0; empty-cells:show;}
-img{ border:0;}
+img{ border:0; vertical-align:middle;}
 ul,li{ list-style:none;}
 a{ text-decoration:none;}
 a,input,textarea{ color:#333;}
@@ -91,3 +91,19 @@ a,input,textarea{ color:#333;}
 .sidebar{ float:right; width:290px;}
 
 /*关于我们*/
+.comments-box{ font-size:14px; margin-top:15px;}
+.commentsorping{ margin:10px 0 20px 0; overflow:hidden;}
+.commentpart, .pingpart{ padding:5px 10px; cursor:pointer; float:left;}
+.commentsorping .active{ background:#d14836; color:#fff;}
+.commentshow{ position:relative;}
+.comments-box ol{ list-style:none;}
+.comments{ border-top:1px solid #e5e5e5; line-height:24px; overflow:hidden;}
+.comment-author{ padding:12px 0; position:relative;}
+.comment-author cite{ font-style:normal; margin-right:5px; color:#333; font-weight:700;}
+.comment-author span.floor{ float:right; color:#ccc;}
+.floor{ position:absolute; right:0; top:12px;}
+.comment-con{ display:block; margin-left:50px; word-break:break-all; text-align:justify;}
+.comment-con p{ font-size:14px; color:#333;}
+.comment-reply{ text-align:right; color:#999;}
+ol.comment-list li .children{ margin-left:50px;}
+.reply-comment-author a{ color:#0055aa;}
