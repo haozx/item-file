@@ -6,8 +6,7 @@
 <link href="css/style.css" rel="stylesheet" type="text/css" />
 </head>
 <style>
-.pinglist li{ border-bottom:1px dashed #ddd; padding:5px 0;}
-.respond{ border-top:14px solid #ddd; margin-top:20px;}
+
 </style>
 <body>
 <div id="wrap">
@@ -175,15 +174,45 @@
           </li>
         </ol>
       </div>
-      <ul class="pinglist" style="display:block;">
+      <ul class="pinglist" style="display:none;">
         <li>还没有Trackback</li>
       </ul>
       <div id="respond" class="respond">
-        <h2 class="">发表评论</h2>
+        <h2 class="comments-title">发表评论</h2>
+        <form method="post" action="#" id="commentform">
+          <div id="comment-author-info">
+            <p><input type="text" placeholder="你的昵称" required="required" name="author" id="author" value="" size="14" tabindex="1" /><label>签名</label><em>*</em></p>
+            <p><input type="text" placeholder="你的邮箱" required="required" name="author" id="author" value="" size="14" tabindex="1" /><label>邮箱</label><em>*</em></p>
+            <p><input type="text" placeholder="让我找到你" required="required" name="author" id="author" value="" size="14" tabindex="1" /><label>网址</label><em>*</em></p>
+          </div>
+          
+          <p class="comment-form-comment">
+            <textarea placeholder="评论一下" name="comment" tabindex="4" >
+            </textarea>
+          </p>
+          <input name="submit" type="submit" value="SUBMIT（Ctrl + Enter）" class="commentsubmit" />
+        
+        </form>
       </div>
       
     </div>
-    <div>右</div>
+    <div class="sidebar">
+      <aside id="recent-posts-3" class="widget widget_recent_entries">
+        <h2>最近文章</h2>
+        <ul>
+          <li><a href="#">让我们来谈谈热门话题：财务自由</a></li>
+          <li><a href="#">重读《射雕》手记</a></li>
+          <li><a href="#">你是想要一个乖巧的孩子还是一个积极的孩子？</a></li>
+          <li><a href="#">双目相望，两耳生情</a></li>
+          <li><a href="#">老头王八</a></li>
+          <li><a href="#">理智情感：每日面对的内心冲突</a></li>
+          <li><a href="#">学问，就是对问题说得出道理</a></li>
+          <li><a href="#">我和RSS那点事儿</a></li>
+          <li><a href="#">悼念杨绛先生：最贤的妻，最才的女</a></li>
+          <li><a href="#">给十年前“正在备战高考”的自己的一封信。</a></li>
+        </ul>
+      </aside>
+    </div>
   </div>
   
 </div>

@@ -9,8 +9,10 @@ address{ font-style:normal; font-weight:500;}
 table{width:100%; border-collapse:collapse; border-spacing:0; empty-cells:show;}
 img{ border:0; vertical-align:middle;}
 ul,li{ list-style:none;}
+em{ font-style:normal; font-weight:500;}
 a{ text-decoration:none;}
 a,input,textarea{ color:#333;}
+input, textarea{ outline:none;}
 .left, .right{ display:inline;}
 .clearfix:after{ clear:both;}
 .clearfix:before, .clearfix:after{ content:''; display:table; line-height:0;}
@@ -128,3 +130,12 @@ ol.comment-list li .children{ margin-left:50px;}
 .uyanpost .postwrap .postaction{ height:30px;}
 .uyanpost .postwrap .paborder{ background-color:#f6f8f9; border-top:1px solid #f1f3f4;}
 .uyanpost .postwrap .postaction .actionfunction{ float:left; width:30px; height:30px;}
+.pinglist li{ border-bottom:1px dashed #ddd; padding:5px 0;}
+.respond{ border-top:1px solid #ddd; margin-top:20px;}
+.comments-title{ margin:15px 0; width:100%; font-size:18px; line-height:30px; font-weight:700; position:relative;}
+.respond p{ position:relative; width:100%;}
+.respond p input{ height:18px; width:200px; padding:7px 10px; margin:5px 0; line-height:18px;}
+.respond p input, .respond textarea { border:2px solid #eee; background-color:#fafafa;}
+#comment-author-info label{ margin-left:10px;}
+.respond textarea{ width:97%; margin:5px 0 10px 0; padding:1%; height:150px; resize:none;}
+.commentsubmit{ background:#d14836; border:none; color:#fff; cursor:pointer; padding:0 15px; vertical-align:middle; width:auto; line-height:28px; height:28px; font-size:12px;}
