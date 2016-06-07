@@ -107,3 +107,24 @@ a,input,textarea{ color:#333;}
 .comment-reply{ text-align:right; color:#999;}
 ol.comment-list li .children{ margin-left:50px;}
 .reply-comment-author a{ color:#0055aa;}
+.comment-box{ font-size:12px; margin-top:15px; overflow:hidden;}
+.comment-width{ width:100%;}
+.comment-title{ float:left; width:230px;}
+.comment-title h4{ font-size:18px; color:#333;}
+.pull-right{float:right;}
+.pull-right .icon-star{ width:18px; height:18px; float:left; display:block; background:url(../images/star.png) no-repeat; margin-top:3px; margin-right:5px;}
+.pull-right .icon-star_bg1{ width:12px; height:23px; display:block; float:left; background:url(../images/star_bg.png) no-repeat;}
+.pull-right .counter{ display:block; float:left; height:23px; line-height:23px; background:#d3d8db; font-size:13px; font-weight:700; color:#5e5e5e;}
+.pull-right .icon-star-bgr{ display:block; float:left; width:8px; height:23px; background:url(../images/star_bg.png) right 0 no-repeat;}
+.pull-right a:hover .icon-star_bg1{ display:block; float:left; width:12px; height:23px; background:url(../images/star_bg.png) 0 -23px no-repeat;}
+.pull-right a:hover .counter{ display:block; float:left; background:#bdc5c9; color:#333; font-size:13px; font-weight:700; line-height:23px;}
+.pull-right a:hover .icon-star-bgr{ display:block; float:left; width:12px; height:23px; background:url(../images/star_bg.png) -19px -23px no-repeat;}
+.blockhead{ float:left;}
+.headimg, .headimg img{ width:48px; height:48px; border-radius:3px;}
+.blockbox .postarea{ padding:0 0 0 60px; margin:0 0 12px;}
+.uyanpost .postborder{ border:2px solid #ccd4d9; margin-bottom:12px;}
+.wraparea .textareawrap{ background-colo0r:#fff; overflow:hidden; padding:4px; _width:92%;}
+.wraparea .textareawrap .textareatstyle{ width:100%; height:66px; line-height:22px; resize:none; border:none; outline:none;}
+.uyanpost .postwrap .postaction{ height:30px;}
+.uyanpost .postwrap .paborder{ background-color:#f6f8f9; border-top:1px solid #f1f3f4;}
+.uyanpost .postwrap .postaction .actionfunction{ float:left; width:30px; height:30px;}
